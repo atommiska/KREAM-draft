@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KREAM HELSINKI - Aineettoman omaisuuden ja luovien alojen kaupallistamisen kumppani</title>
+  <meta name="description" content="KREAM Helsinki - Ulkoistettu kehitysyksikkösi, mentorisi ja strateginen kumppanisi IPR-, media- ja luovien alojen kaupallistamisessa.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kreamMint: '#66cccc',
+            kreamCoral: '#cc6666',
+            kreamSkyblue: '#66ccff',
+            kreamYellow: '#ffcc33',
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #66cccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-800 antialiased selection:bg-teal-500 selection:text-white">
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION                               -->
+  <!-- ========================================== -->
+  <header class="relative min-h-screen overflow-hidden flex flex-col justify-between py-6 px-4 sm:px-8 md:px-12 text-white bg-[url(assets/pexels-edward-jenner-4253051.jpg)]">
+    
+
+<nav class="relative z-10 w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center py-4 px-4">
+  
+  <!-- Mobile Header Row: Displays toggle button on small screens -->
+  <div class="w-full sm:w-auto flex justify-between sm:justify-center items-center">
+    <!-- Optional Logo/Brand placeholder if needed, otherwise spacer -->
+    <!--<span class="sm:hidden font-bold text-sm">Menu</span>-->
+
+    <!-- Hamburger Toggle Button (Visible only on mobile) -->
+    <button 
+      id="menu-toggle"
+      aria-label="Toggle navigation"
+      class="sm:hidden p-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 text-current focus:outline-none"
+    >
+      <!-- Hamburger Icon -->
+      <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Close (X) Icon -->
+      <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Navigation Menu (Pill Bar) -->
+  <!-- Mobile: Hidden by default, stacked vertically when open -->
+  <!-- Desktop (sm+): Always visible, horizontal pill layout -->
+  <div 
+    id="nav-menu"
+    class="hidden sm:flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-md p-3 sm:px-4 sm:py-2 rounded-2xl sm:rounded-full border border-white/20 shadow-lg w-full sm:w-auto mt-3 sm:mt-0"
+  >
+    <a href="#palvelut" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Palvelut</a>
+    <a href="#meista" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Meistä</a>
+    <a href="#asiakkaita" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Asiakkaitamme</a>
+    <a href="#yhteystiedot" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Yhteystiedot</a>
+  </div>
+
+</nav>
+
+    <!-- Main Hero Content -->
+    <div class="relative z-10 w-full max-w-6xl mx-auto my-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+       <!-- Left Logo Badge Column -->
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <div class="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-0">
+          <img src="assets/kream_logo_medium.png" alt="KREAM HELSINKI Logo" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Text Column -->
+      <div class="lg:col-span-8 space-y-6">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-md">
+          KREAM HELSINKI
+        </h1>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-wide">
+          Aineettoman omaisuuden ja luovien alojen kaupallistamisen kumppani
+        </h2>
+        <p class="text-base sm:text-lg leading-relaxed text-gray-100 max-w-2xl font-semibold drop-shadow">
+          Toimimme ulkoistettuna kehitysyksikkönäsi, mentorina ja strategisena kumppanina, joka hoitaa kaupallistamisen puolestasi – olipa kyseessä tuotekonseptointi, mediasisällöt tai lakiasiat. Olitpa vasta aloittamassa tai etsimässä toiminnalle uutta suuntaa, tuomme käyttöösi huippuosaajien verkoston ja vankan kokemuksen. Keskity siihen mitä rakastat, me hoidamme loput.
+        </p>
+
+        <!-- CTA & Socials -->
+        <div class="pt-4 space-y-6">
+          <!--<button class="contact-modal-trigger inline-block bg-white/20 hover:bg-white/30 backdrop-blur-md text-white font-extrabold text-lg px-8 py-3.5 rounded-full border-2 border-white transition-all shadow-xl hover:scale-105 active:scale-95 uppercase tracking-wider">
+            OTA YHTEYTTÄ!
+          </button>-->
+
+          <!-- Social Icons -->
+          <div class="flex items-center gap-4 text-2xl pt-2">
+            <a href="https://www.instagram.com/kream_helsinki/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/30 flex items-center justify-center transition-all hover:scale-110" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/kreamhelsinki" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/30 flex items-center justify-center transition-all hover:scale-110" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/kream-helsinki/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/30 flex items-center justify-center transition-all hover:scale-110" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:info@kreamhelsinki.fi" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/30 flex items-center justify-center transition-all hover:scale-110" aria-label="Sähköposti">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+     
+    </div>
+
+    <!-- Empty spacer for footer layout symmetry -->
+    <div class="relative z-10"></div>
+  </header>
+
+
+  <!-- ========================================== -->
+  <!-- TUOTANNOT BANNER SECTION                   -->
+  <!-- ========================================== -->
+  <section id="tuotannot" class="relative h-72 sm:h-96 w-full overflow-hidden flex items-center justify-center">
+    <!-- Background Craftsmanship Photo -->
+   <img src="assets/tuotannot_bg.jpg" alt="Tuotannot taustakuva" class="absolute inset-0 w-full h-full object-cover filter brightness-75">
+   <div class="absolute inset-0 bg-black/30 backdrop-blur-[1px]"></div>
+
+    <!-- Banner 3D Styled Text Overlay -->
+    <div class="relative z-10 text-center px-4">
+       <h2 class="text-5xl sm:text-7xl md:text-8xl font-bold text-white uppercase tracking-wider select-none">TUOTANNOT</h2>
+     </div>
+   </section>
+
+
+  <!-- ========================================== -->
+  <!-- PALVELUT SECTION                           -->
+  <!-- ========================================== -->
+  <section id="palvelut" class="bg-kreamMint text-white py-16 sm:py-24 px-6 sm:px-12 md:px-16">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Left Illustration -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-white/10 hover:scale-105 transition-transform duration-300">
+          <img src="assets/services_bulb.jpg" alt="Palvelut kuvaus" class="w-full h-auto object-cover">
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="lg:col-span-7 space-y-6">
+        <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white drop-shadow-sm">
+          PALVELUT
+        </h2>
+
+        <ul class="space-y-4 text-base sm:text-lg font-medium font-semibold text-white/95">
+          <li class="flex items-start gap-3">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-white mt-2 flex-shrink-0"></span>
+            <span>IPR-strategiat ja lakiapu</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-white mt-2 flex-shrink-0"></span>
+            <span>Brändi-identiteetit, tuoteportfoliot ja markkinoille pääsy</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-white mt-2 flex-shrink-0"></span>
+            <span>Media- ja tapahtumatuottajat, ohjaajat, kuvaajat</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-white mt-2 flex-shrink-0"></span>
+            <span>Käsikirjoitukset, tarinallistaminen ja konseptit</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-white mt-2 flex-shrink-0"></span>
+            <span>Luovan tekijän managerointi- ja mentoripalvelut</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-white mt-2 flex-shrink-0"></span>
+            <span>Mediatekninen konsultointi ja strategiat</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-white mt-2 flex-shrink-0"></span>
+            <span>Luovien alojen kaupalliset tuotannot</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- MEISTÄ SECTION                             -->
+  <!-- ========================================== -->
+  <section id="meista" class="bg-kreamCoral text-white py-16 sm:py-24 px-6 sm:px-12 md:px-16">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Left Content -->
+      <div class="lg:col-span-7 space-y-6">
+        <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white drop-shadow-sm">
+          MEISTÄ
+        </h2>
+
+        <div class="space-y-4 text-base sm:text-lg leading-relaxed text-white/95 font-semibold">
+          <p>
+            Kream Helsinki sai alkunsa vuonna 2015, kun joukko eri alojen huippuammattilaisia yhdisti voimansa IPR-valmennuksessa. Ryhmämme juridinen, kaupallinen, viestinnällinen ja tuotannollinen osaaminen synnytti ainutlaatuisen toimintamallin – parviälyn. Intohimo aineettomien oikeuksien tunnistamiseen ja kaupallistamiseen johti KREAM Helsinki -osuuskunnan perustamiseen.
+          </p>
+          <p>
+            Toimintamme laajeni nopeasti uusien toimeksiantojen, kansainvälisten verkostojen ja merkittävien apurahojen myötä. Vuodesta 2020 lähtien olemme kasvaneet myös vahvaksi monimediaiseksi toimijaksi.
+          </p>
+          <p>
+            Konsultointi ja koulutus ovat yhä toimintamme ytimessä, ja meitä ohjaavat aina yhdessä oppiminen sekä moninäkökulmaisuus. Tule mukaan verkostoomme ja valjasta parviälysi käyttöön luovan talouden edelläkävijöiden kanssa!
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 hover:scale-105 transition-transform duration-300">
+          <img src="assets/teamwork_hands.jpg" alt="Meistä tiimi parviäly" class="w-full h-auto object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- ASIAKKAITAMME SECTION                      -->
+  <!-- ========================================== -->
+  <section id="asiakkaita" class="bg-kreamSkyblue text-white py-16 sm:py-24 px-6 sm:px-12 md:px-16">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white text-left drop-shadow-sm">
+        ASIAKKAITAMME
+      </h2>
+
+      <!-- Showcase Cards Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all shadow-lg hover:-translate-y-1 group">
+          <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-film"></i>
+          </div>
+          <span class="font-bold text-sm sm:text-base">Media & Tuotantoyhtiöt</span>
+        </div>
+
+        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all shadow-lg hover:-translate-y-1 group">
+          <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <span class="font-bold text-sm sm:text-base">IPR & Innovaatiot</span>
+        </div>
+
+        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all shadow-lg hover:-translate-y-1 group">
+          <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <span class="font-bold text-sm sm:text-base">Muotoilijat & Taiteilijat</span>
+        </div>
+
+        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all shadow-lg hover:-translate-y-1 group">
+          <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <span class="font-bold text-sm sm:text-base">Kasvuyritykset</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================== -->
+  <!-- YHTEYSTIEDOT / FOOTER SECTION              -->
+  <!-- ========================================== -->
+  <footer id="yhteystiedot" class="bg-kreamYellow text-gray-900 py-16 sm:py-24 px-6 sm:px-12 md:px-16 relative">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column: Company Contact Details -->
+      <div class="lg:col-span-6 space-y-6">
+        <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-gray-900 drop-shadow-sm">
+          YHTEYSTIEDOT
+        </h2>
+
+        <div class="space-y-3 text-base sm:text-lg font-medium text-gray-900">
+          <p class="font-extrabold text-xl">KREAM Helsinki osk</p>
+          <p>Luotsikatu 2</p>
+          <p>00160 Helsinki</p>
+          <p class="pt-2 font-bold">Kati Repo, COO</p>
+          <p><a href="tel:+358405268609" class="hover:underline">+358 40 5268609</a></p>
+          <p><a href="mailto:info@kreamhelsinki.fi" class="hover:underline font-semibold text-gray-900">info@kreamhelsinki.fi</a></p>
+        </div>
+
+        <!-- Small Logo Badge -->
+        <div class="w-60 h-20 overflow-hidden border-4 border-black bg-black">
+          <img src="assets/KREAM_HELSINKI_logo_horizontal_4color_bl.png" alt="KREAM Helsinki Pienoislogo" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Financial & Corporate Register Info -->
+        <div class="space-y-1 text-sm font-semibold text-gray-800 pt-2">
+          <p>Y-tunnus 2765825-9</p>
+          <p>FI70 4108 0013 0679 32</p>
+          <p>OmaSp BIC: ITELFIHH</p>
+        </div>
+
+        <!-- Privacy Link & Social Icons -->
+        <div class="pt-4 space-y-4">
+          <div>
+            <a href="assets/KREAM_Rekisteri- ja tietosuojaseloste.pdf" class="text-sm font-bold underline hover:text-gray-700 transition-colors">Tietosuojaseloste</a>
+          </div>
+
+          <div class="flex items-center gap-4 text-2xl">
+            <a href="https://www.instagram.com/kream_helsinki/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-gray-900 transition-all hover:scale-110" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/kreamhelsinki" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-gray-900 transition-all hover:scale-110" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/kream-helsinki/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-gray-900 transition-all hover:scale-110" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:info@kreamhelsinki.fi" class="w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-gray-900 transition-all hover:scale-110" aria-label="Sähköposti">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Map & Scroll to Top Button -->
+      <div class="lg:col-span-6 flex flex-col items-end gap-6">
+        <!-- Interactive Map Frame -->
+        <div class="w-full h-80 sm:h-96 rounded-3xl overflow-hidden border-4 border-white/50 shadow-2xl bg-white relative">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.7644265431608!2d24.96644027725959!3d60.16805174426749!2m3!1f0!0f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bce6ed12ffb%3A0x2db4ba460fef0db8!2sLuotsikatu%202%2C%2000160%20Helsinki!5e0!3m2!1sfi!2sfi!4v1700000000000!5m2!1sfi!2sfi" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="KREAM Helsinki karttasijainti">
+          </iframe>
+        </div>
+
+        <!-- Floating Scroll to Top Arrow -->
+        <button id="scroll-top-btn" class="w-14 h-14 rounded-full bg-white text-kreamYellow flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all text-2xl border-0 aria-label="Palaa sivun alkuun">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  
+  <!-- Inline Dynamic Interactions Script -->
+  <script>
+    
+      // Scroll to top
+      const scrollTopBtn = document.getElementById('scroll-top-btn');
+      if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+   
+  </script>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    menuToggle.addEventListener('click', () => {
+    // Toggle menu visibility
+    navMenu.classList.toggle('hidden');
+
+    // Swap hamburger and X icons
+    iconOpen.classList.toggle('hidden');
+    iconOpen.classList.toggle('block');
+    iconClose.classList.toggle('hidden');
+    iconClose.classList.toggle('block');
+    });
+  </script>
+</body>
+</html>
