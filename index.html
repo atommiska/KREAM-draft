@@ -153,16 +153,26 @@
   <!-- ========================================== -->
   <!-- TUOTANNOT BANNER SECTION                   -->
   <!-- ========================================== -->
-  <section id="tuotannot" class="relative h-72 sm:h-96 w-full overflow-hidden flex items-center justify-center">
-    <!-- Background Craftsmanship Photo -->
-   <img src="assets/tuotannot_bg.jpg" alt="Tuotannot taustakuva" class="absolute inset-0 w-full h-full object-cover filter brightness-75">
-   <div class="absolute inset-0 bg-black/30 backdrop-blur-[1px]"></div>
+ <section id="tuotannot" class="relative h-72 sm:h-96 w-full overflow-hidden flex items-center justify-center">
+  <!-- YouTube Video Background -->
+  <div class="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+    <iframe 
+      class="absolute top-1/2 left-1/2 w-[300%] h-[300%] -translate-x-1/2 -translate-y-1/2 object-cover"
+      src="https://www.youtube.com/embed/eCsGCpsirm8?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUR_VIDEO_ID&playsinline=1&disablekb=1&fs=0&modestbranding=1" 
+      title="Tuotannot taustavideo" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media">
+    </iframe>
+  </div>
 
-    <!-- Banner 3D Styled Text Overlay -->
-    <div class="relative z-10 text-center px-4">
-       <h2 class="text-5xl sm:text-5xl md:text-5xl font-extrabold text-white uppercase tracking-wider select-none">TUOTANNOT</h2>
-     </div>
-   </section>
+  <!-- Dark Overlay / Blur -->
+  <div class="absolute inset-0 bg-black/30 backdrop-blur-[1px]"></div>
+
+  <!-- Banner Text Overlay -->
+  <div class="relative z-10 text-center px-4">
+    <h2 class="text-5xl sm:text-5xl md:text-5xl font-extrabold text-white uppercase tracking-wider select-none">TUOTANNOT</h2>
+  </div>
+</section>
 
 
   <!-- ========================================== -->
