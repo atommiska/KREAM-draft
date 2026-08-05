@@ -275,7 +275,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
       
       <!-- Card 1 -->
-      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(this)">
+      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(event, this)">
         <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
           <i class="fa-solid fa-film"></i>
         </div>
@@ -288,7 +288,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(this)">
+      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(event, this)">
         <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
           <i class="fa-solid fa-lightbulb"></i>
         </div>
@@ -300,7 +300,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(this)">
+      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(event, this)">
         <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
           <i class="fa-solid fa-palette"></i>
         </div>
@@ -312,7 +312,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(this)">
+      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(event, this)">
         <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
           <i class="fa-solid fa-rocket"></i>
         </div>
@@ -456,18 +456,29 @@
 
   <!-- Simple JavaScript for card-details interactivity -->
 <script>
-  function toggleCard(cardElement) {
+  function toggleCard(event, cardElement) {
+    // Prevent the click from bubbling up to the document
+    event.stopPropagation();
+
     const details = cardElement.querySelector('.card-details');
     const isHidden = details.classList.contains('hidden');
     
-    // Close any other currently open card
-    document.querySelectorAll('.card-details').forEach(el => el.classList.add('hidden'));
+    // Close any currently open card
+    closeAllCards();
     
-    // Toggle the target card
+    // Toggle the target card if it was hidden
     if (isHidden) {
       details.classList.remove('hidden');
     }
   }
+
+  // Helper function to hide all card details
+  function closeAllCards() {
+    document.querySelectorAll('.card-details').forEach(el => el.classList.add('hidden'));
+  }
+
+  // Close cards whenever tapping/clicking anywhere on the screen
+  document.addEventListener('click', closeAllCards);
 </script>
 </body>
 </html>
