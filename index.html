@@ -54,8 +54,7 @@
   <!-- ========================================== -->
   <!-- HERO SECTION                               -->
   <!-- ========================================== -->
-<header class="relative min-h-screen overflow-hidden flex flex-col justify-between py-6 px-4 sm:px-8 md:px-12 text-white bg-cover bg-center bg-no-repeat bg-[url(assets/pexels-edward-jenner-4253051.jpg)]">   
-
+<header id="hero-header" data-bg="assets/pexels-edward-jenner-4253051.jpg" class="relative min-h-screen overflow-hidden flex flex-col justify-between py-6 px-4 sm:px-8 md:px-12 text-white bg-cover bg-center bg-no-repeat">
 <nav class="relative z-10 w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center py-4 px-4">
   
   <!-- Mobile Header Row: Displays toggle button on small screens -->
@@ -480,5 +479,32 @@
   // Close cards whenever tapping/clicking anywhere on the screen
   document.addEventListener('click', closeAllCards);
 </script>
+
+// Lazy load hero bg image
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const heroHeader = document.getElementById('hero-header');
+    
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bgUrl = heroHeader.getAttribute('data-bg');
+            if (bgUrl) {
+              heroHeader.style.backgroundImage = `url('${bgUrl}')`;
+            }
+            obs.unobserve(heroHeader);
+          }
+        });
+      }, { rootMargin: '200px' }); // Preloads 200px before scrolling into view
+
+      observer.observe(heroHeader);
+    } else {
+      // Fallback for older browsers
+      heroHeader.style.backgroundImage = `url('${heroHeader.getAttribute('data-bg')}')`;
+    }
+  });
+</script>
+
 </body>
 </html>
