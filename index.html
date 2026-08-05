@@ -85,14 +85,14 @@
   <!-- Mobile: Hidden by default, stacked vertically when open -->
   <!-- Desktop (sm+): Always visible, horizontal pill layout -->
   <div 
-    id="nav-menu"
-    class="hidden sm:flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-md p-3 sm:px-4 sm:py-2 rounded-2xl sm:rounded-full border border-white/20 shadow-lg w-full sm:w-auto mt-3 sm:mt-0"
-  >
-    <a href="#palvelut" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Palvelut</a>
-    <a href="#meista" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Meistä</a>
-    <a href="#asiakkaita" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Asiakkaitamme</a>
-    <a href="#yhteystiedot" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Yhteystiedot</a>
-  </div>
+  id="nav-menu"
+  class="hidden flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-md p-3 sm:px-4 sm:py-2 rounded-2xl sm:rounded-full border border-white/20 shadow-lg w-full sm:w-auto mt-3 sm:mt-0"
+>
+  <a href="#palvelut" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Palvelut</a>
+  <a href="#meista" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Meistä</a>
+  <a href="#asiakkaita" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Asiakkaitamme</a>
+  <a href="#yhteystiedot" class="w-full sm:w-auto text-center px-4 py-2 sm:py-1.5 rounded-full text-sm font-semibold hover:bg-white/20 transition-all">Yhteystiedot</a>
+</div>
 
 </nav>
 
@@ -392,21 +392,33 @@
   </script>
 
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const iconOpen = document.getElementById('icon-open');
-    const iconClose = document.getElementById('icon-close');
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+  const navLinks = navMenu.querySelectorAll('a');
 
-    menuToggle.addEventListener('click', () => {
-    // Toggle menu visibility
-    navMenu.classList.toggle('hidden');
+// Function to reset/close the menu state
+  function closeMenu() {
+  navMenu.classList.add('hidden');
+  iconOpen.classList.remove('hidden');
+  iconClose.classList.add('hidden');
+  }
 
-    // Swap hamburger and X icons
-    iconOpen.classList.toggle('hidden');
-    iconOpen.classList.toggle('block');
-    iconClose.classList.toggle('hidden');
-    iconClose.classList.toggle('block');
-    });
+// Function to toggle menu state
+  function toggleMenu() {
+  navMenu.classList.toggle('hidden');
+  iconOpen.classList.toggle('hidden');
+  iconClose.classList.toggle('hidden');
+  }
+
+// Toggle menu on button click
+  menuToggle.addEventListener('click', toggleMenu);
+
+// Close menu when any link inside nav-menu is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
   </script>
 </body>
 </html>
