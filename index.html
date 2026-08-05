@@ -267,43 +267,66 @@
   <!-- ASIAKKAITAMME SECTION                      -->
   <!-- ========================================== -->
   <section id="asiakkaita" class="bg-kreamSkyblue text-white py-16 sm:py-24 px-6 sm:px-12 md:px-16">
-    <div class="max-w-6xl mx-auto space-y-12">
-      <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white text-left drop-shadow-sm">
-        ASIAKKAITAMME
-      </h2>
+  <div class="max-w-6xl mx-auto space-y-12">
+    <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white text-left drop-shadow-sm">
+      ASIAKKAITAMME
+    </h2>
 
-      <!-- Showcase Cards Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all shadow-lg hover:-translate-y-1 group">
-          <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-film"></i>
-          </div>
-          <span class="font-bold text-sm sm:text-base">Media & Tuotantoyhtiöt</span>
+    <!-- Showcase Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(this)">
+        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-film"></i>
         </div>
-
-        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all shadow-lg hover:-translate-y-1 group">
-          <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-lightbulb"></i>
-          </div>
-          <span class="font-bold text-sm sm:text-base">IPR & Innovaatiot</span>
-        </div>
-
-        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all shadow-lg hover:-translate-y-1 group">
-          <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-palette"></i>
-          </div>
-          <span class="font-bold text-sm sm:text-base">Muotoilijat & Taiteilijat</span>
-        </div>
-
-        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all shadow-lg hover:-translate-y-1 group">
-          <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-rocket"></i>
-          </div>
-          <span class="font-bold text-sm sm:text-base">Kasvuyritykset</span>
+        <span class="font-bold text-sm sm:text-base">Media & Tuotantoyhtiöt</span>
+        
+        <!-- Expanded Details (hidden by default) -->
+        <div class="card-details hidden mt-4 pt-4 border-t border-white/20 text-xs sm:text-sm text-white/90">
+           Autamme tuotantoyhtiöitä sopimusoikeudessa, tekijänoikeusasiassa sekä lisensoinnissa kaikissa tuotannon vaiheissa.
         </div>
       </div>
+
+      <!-- Card 2 -->
+      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(this)">
+        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <span class="font-bold text-sm sm:text-base">IPR & Innovaatiot</span>
+        
+        <div class="card-details hidden mt-4 pt-4 border-t border-white/20 text-xs sm:text-sm text-white/90">
+           Suojaamme aineettoman pääoman, patentit, tavaramerkit ja autamme kaupallistamaan innovaatiot turvallisesti.
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(this)">
+        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <span class="font-bold text-sm sm:text-base">Muotoilijat & Taiteilijat</span>
+        
+        <div class="card-details hidden mt-4 pt-4 border-t border-white/20 text-xs sm:text-sm text-white/90">
+           Tuemme luovien alojen tekijöitä sopimusneuvotteluissa, rojaltimalleissa ja immateriaalioikeuksien valvonnassa.
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card cursor-pointer bg-white/15 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-white/25 transition-all duration-300 shadow-lg group" onclick="toggleCard(this)">
+        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+        <span class="font-bold text-sm sm:text-base">Kasvuyritykset</span>
+        
+        <div class="card-details hidden mt-4 pt-4 border-t border-white/20 text-xs sm:text-sm text-white/90">
+           Tarjoamme skaalautuvaa lakineuvontaa rahoituskierroksista osakassopimuksiin ja kansainvälistymiseen.
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 
   <!-- ========================================== -->
@@ -431,5 +454,21 @@
     link.addEventListener('click', closeMenu);
   });
   </script>
+
+  <!-- Simple JavaScript for card-details interactivity -->
+<script>
+  function toggleCard(cardElement) {
+    const details = cardElement.querySelector('.card-details');
+    const isHidden = details.classList.contains('hidden');
+    
+    // Close any other currently open card
+    document.querySelectorAll('.card-details').forEach(el => el.classList.add('hidden'));
+    
+    // Toggle the target card
+    if (isHidden) {
+      details.classList.remove('hidden');
+    }
+  }
+</script>
 </body>
 </html>
