@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colors */
+  --color-kreamMint: #66cccc;
+  --color-kreamCoral: #cc6666;
+  --color-kreamSkyblue: #66ccff;
+  --color-kreamYellow: #ffcc33;
+
+  /* Custom Font Stack */
+  --font-sans: Montserrat, Outfit, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #66cccc;
+  border-radius: 4px;
+}
